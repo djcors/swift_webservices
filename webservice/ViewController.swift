@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         
         if let jsonArray =  Arreglojson as? NSArray{
             jsonArray.enumerateObjectsUsingBlock({model, index, stop in
-                self.InfoClima = model["description"] as! String
+                self.InfoClima = model["description"] as? String
             });
         }
         

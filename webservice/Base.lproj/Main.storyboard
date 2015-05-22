@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,33 +14,64 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKK-Vv-rVV">
-                                <rect key="frame" x="16" y="59" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKK-Vv-rVV">
+                                <rect key="frame" x="16" y="131" width="557" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8W-3S-Ee2">
-                                <rect key="frame" x="105" y="146" width="111" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8W-3S-Ee2">
+                                <rect key="frame" x="74" y="224" width="440" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.99893561408897613" blue="0.98792014620654223" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Buscar en el api">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.99893561409999998" blue="0.98792014620000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="accion:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4tD-A6-SNY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clima" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLa-Rs-0XT">
-                                <rect key="frame" x="63" y="208" width="181" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Clima" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLa-Rs-0XT">
+                                <rect key="frame" x="74" y="289" width="440" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EVv-va-GrN">
+                                <rect key="frame" x="-7" y="18" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="5Vp-BM-gUz"/>
+                                </items>
+                            </navigationBar>
+                            <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNw-CU-fOY">
+                                <rect key="frame" x="0.0" y="536" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="Tdt-zu-v0M"/>
+                                    <tabBarItem systemItem="more" id="ntg-2l-Rum"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DKK-Vv-rVV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="111" id="0bv-2Q-d58"/>
+                            <constraint firstItem="EVv-va-GrN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-2" id="4iK-pr-mbF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DKK-Vv-rVV" secondAttribute="trailing" constant="11" id="6nB-Yg-tEh"/>
+                            <constraint firstItem="EVv-va-GrN" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-2" id="7Jv-H4-yBH"/>
+                            <constraint firstItem="WNw-CU-fOY" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="8yq-N3-XkN"/>
+                            <constraint firstItem="dLa-Rs-0XT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="58" id="Exn-FW-mIe"/>
+                            <constraint firstItem="EVv-va-GrN" firstAttribute="width" relation="lessThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="width" id="FKU-j7-zzj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H8W-3S-Ee2" secondAttribute="trailing" constant="70" id="Q6X-vd-ILm"/>
+                            <constraint firstItem="H8W-3S-Ee2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="58" id="QUf-JK-KGm"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WNw-CU-fOY" secondAttribute="bottom" id="R5A-Ev-hLh"/>
+                            <constraint firstItem="DKK-Vv-rVV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="dEF-5P-nr1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dLa-Rs-0XT" secondAttribute="trailing" constant="70" id="ecF-eX-HWb"/>
+                            <constraint firstItem="dLa-Rs-0XT" firstAttribute="top" secondItem="H8W-3S-Ee2" secondAttribute="bottom" constant="35" id="rRW-BG-243"/>
+                            <constraint firstItem="H8W-3S-Ee2" firstAttribute="top" secondItem="DKK-Vv-rVV" secondAttribute="bottom" constant="63" id="x38-c8-2w6"/>
+                        </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="city" destination="DKK-Vv-rVV" id="t4L-qp-F2n"/>
                         <outlet property="clima" destination="dLa-Rs-0XT" id="4eD-f9-NIP"/>
@@ -47,6 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="300" y="313"/>
         </scene>
     </scenes>
 </document>
