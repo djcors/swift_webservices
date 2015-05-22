@@ -409,6 +409,7 @@
 				18F145601B0C233F004809F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18F145611B0C233F004809F9 /* Build configuration list for PBXNativeTarget "webserviceTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				18F145631B0C233F004809F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
